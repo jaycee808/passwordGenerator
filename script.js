@@ -133,3 +133,13 @@ function generatePassword() {
 
 // Query selector to link generate button in html to javascript
 var generateBtn = document.querySelector('#generate');
+
+// Function to display password on screen
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector('#password');
+
+    passwordText.value = password.concat(finalPassword);
+}
+// Event listener to display password on screen
+generateBtn.addEventListener('click', writePassword);

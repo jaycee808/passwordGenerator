@@ -130,3 +130,6 @@ function generatePassword() {
     getPasswordOptions();
     console.log(finalPassword);
 }
+
+// Query selector to link generate button in html to javascript
+var generateBtn = document.querySelector('#generate');

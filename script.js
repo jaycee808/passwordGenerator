@@ -84,3 +84,8 @@ var upperCasedCharacters = [
     'Y',
     'Z'
 ];
+
+// Global variables
+var passwordLength = "";
+var finalPassword = [];
+var passwordChoices = [];

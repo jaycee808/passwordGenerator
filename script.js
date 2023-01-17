@@ -124,3 +124,9 @@ function getPasswordOptions() {
       //  return(finalPassword);
     }
 }
+
+// Function to generate password
+function generatePassword() {
+    getPasswordOptions();
+    console.log(finalPassword);
+}

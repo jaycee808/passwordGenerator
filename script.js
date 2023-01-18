@@ -87,11 +87,11 @@ var upperCasedCharacters = [
 
 // Global variables
 var passwordLength = "";
-var finalPassword = [];
 var passwordChoices = [];
 
 // Function to prompt user for password options
-function getPasswordOptions() {
+function generatePassword() {
+    var finalPassword = [];
     var passwordLength = (prompt("What length of password do you want? The password has to have a minimum of 10 characters and a maximum of 64"));
 
     while(passwordLength < 10 || passwordLength > 64) {
@@ -109,26 +109,25 @@ function getPasswordOptions() {
     // if statement to include selected characters
     if (confirmSpecialCharacters) {
         passwordChoices = passwordChoices.concat(specialCharacters);
-    } if (confirmNumericCharacters) {
+    } 
+    if (confirmNumericCharacters) {
         passwordChoices = passwordChoices.concat(numericCharacters);
-    } if (confirmLowerCasedCharacters) {
+    } 
+    if (confirmLowerCasedCharacters) {
         passwordChoices = passwordChoices.concat(lowerCasedCharacters);
-    } if (confirmUpperCasedCharacters) {
+    } 
+    if (confirmUpperCasedCharacters) {
         passwordChoices = passwordChoices.concat(upperCasedCharacters);
     }
     
     // for loop to select random characters
     for (var i = 0; i < passwordLength; i++) {
-      var finalPassword = passwordChoices[Math.floor(Math.random() * passwordChoices.length)];
-        console.log(finalPassword)
-      //  return(finalPassword);
+      var passwordCharacter = passwordChoices[Math.floor(Math.random() * passwordChoices.length)];
+        console.log(passwordCharacter);
+        finalPassword.push(passwordCharacter);
     }
-}
 
-// Function to generate password
-function generatePassword() {
-    getPasswordOptions();
-    console.log(finalPassword);
+    return finalPassword.join("");
 }
 
 // Query selector to link generate button in html to javascript
@@ -138,8 +137,7 @@ var generateBtn = document.querySelector('#generate');
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
-
-    passwordText.value = password.concat(finalPassword);
+    passwordText.value = password;
 }
 // Event listener to display password on screen
 generateBtn.addEventListener('click', writePassword);

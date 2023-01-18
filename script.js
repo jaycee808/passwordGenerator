@@ -130,7 +130,6 @@ function generatePassword() {
     // for loop to select random characters
     for (var i = 0; i < passwordLength; i++) {
       var passwordCharacter = passwordChoices[Math.floor(Math.random() * passwordChoices.length)];
-        console.log(passwordCharacter);
         finalPassword.push(passwordCharacter);
     }
     // the output of password choices

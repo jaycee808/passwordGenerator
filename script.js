@@ -97,7 +97,7 @@ function generatePassword() {
     while(passwordLength < 10 || passwordLength > 64) {
         alert("Please choose a number between 10 and 64!");
         // ask user for password length again
-        getPasswordOptions();
+        generatePassword();
     }
 
     // Prompts to choose characters to include in password
@@ -119,6 +119,11 @@ function generatePassword() {
     if (confirmUpperCasedCharacters) {
         passwordChoices = passwordChoices.concat(upperCasedCharacters);
     }
+    if (confirmSpecialCharacters === false &&  confirmNumericCharacters === false && confirmLowerCasedCharacters === false && confirmUpperCasedCharacters === false) {
+        alert("Please choose at least one character type!");
+        // start user inputs again
+        generatePassword();
+    } 
     
     // for loop to select random characters
     for (var i = 0; i < passwordLength; i++) {

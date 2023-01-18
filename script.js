@@ -89,8 +89,9 @@ var upperCasedCharacters = [
 var passwordLength = "";
 var passwordChoices = [];
 
-// Function to prompt user for password options
+// Function to prompt user for password length
 function generatePassword() {
+    //variable to store password
     var finalPassword = [];
     var passwordLength = (prompt("What length of password do you want? The password has to have a minimum of 10 characters and a maximum of 64"));
 
@@ -119,6 +120,7 @@ function generatePassword() {
     if (confirmUpperCasedCharacters) {
         passwordChoices = passwordChoices.concat(upperCasedCharacters);
     }
+    // if statement to alert user if no character options are specified
     if (confirmSpecialCharacters === false &&  confirmNumericCharacters === false && confirmLowerCasedCharacters === false && confirmUpperCasedCharacters === false) {
         alert("Please choose at least one character type!");
         // start user inputs again
@@ -131,7 +133,7 @@ function generatePassword() {
         console.log(passwordCharacter);
         finalPassword.push(passwordCharacter);
     }
-
+    // the output of password choices
     return finalPassword.join("");
 }
 

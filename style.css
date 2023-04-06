@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:wght@300;400;500;600;700&display=swap');
 *,
 *::before,
 *::after {
@@ -10,11 +11,22 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Fjalla One", sans-serif;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: #f9fbfd;
+    background-color: #27272A;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .wrapper {
@@ -27,26 +39,26 @@ header {
     text-align: center;
     padding: 20px;
     padding-top: 0px;
-    color: hsl(206, 17%, 28%);
+    color: #FFF;
 }
 
 .card {
-    background-color: hsl(0, 0%, 100%);
+    background-color: #00249C;
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-    color: hsl(206, 17%, 28%);
+    color: #FFF;
     font-size: 18px;
     margin: 0 auto;
     max-width: 800px;
     padding: 30px 40px;
+    border: 2px solid #FFF;
 }
 
 .card-header::after {
     content: " ";
     display: block;
     width: 100%;
-    background: #e7e9eb;
     height: 2px;
 }
 
@@ -62,7 +74,6 @@ header {
     content: " ";
     display: block;
     width: 100%;
-    background: #e7e9eb;
     height: 2px;
 }
 
@@ -74,8 +85,9 @@ header {
 
 .btn {
     border: none;
-    background-color: hsl(360, 91%, 36%);
-    border-radius: 25px;
+    background-color: #1E3765;
+    border: 2px solid #000;
+    border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
     color: hsl(0, 0%, 100%);
     display: inline-block;
@@ -85,6 +97,8 @@ header {
     padding: 14px 34px;
     text-align: center;
     cursor: pointer;
+    font-family: "Fjalla One", sans-serif;
+    text-transform: uppercase;
 }
 
 button[disabled] {
@@ -111,7 +125,7 @@ button[disabled] {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px dashed #c0c7cf;
+    border: 2px solid #000;
     border-radius: 6px;
     resize: none;
     overflow: hidden;

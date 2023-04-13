@@ -7,7 +7,7 @@ This application was designed to generate a random selection of characters from 
 ## Screenshot
 
 <p align="center">
-  <img src="./images/screenshot.png" width="350" title="screenshot of application">
+  <img src="./images/password-screenshot.png" width="350" title="screenshot of application">
 </p>
 
 ## Link to deployed site
